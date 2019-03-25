@@ -22,6 +22,7 @@
 	to communicate with each other without writing detailed REST client code.
 
 #App Detail
+	
 	The application is a replica sample taken from an example from DZone articles for Consul, Ribbon &,
 	Fiegn Cient.
 	
