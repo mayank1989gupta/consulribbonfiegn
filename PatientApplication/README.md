@@ -37,8 +37,21 @@
 
 #App Test
 	
-	Start consul Agent: consul agent -dev
-	Start both the micro-services, to test ribbon start the Volunteer micro-service of multiple ports.
+	1. Start consul Agent: 
+	docker run -d -p 8500:8500 -p 8600:8600/udp --network=gradle_docker_net --name=consul consul:latest
+	agent -server -bootstrap -ui -client=0.0.0.0
+	2. Start both the micro-services:
+		The micro - services works as docker containers
+		After starting the consul agent follow the steps:
+		-> build the volunteer app -> gradle build docker
+		-> docker run -d --name volunteer --network=gradle_docker_net -p 7002:7002 -p 7003:7002 -p
+		7004:7002 -t springio/gs-rest-service
+		-> build the patient app -> gradle build docker
+		-> docker run -d --name patient --network=gradle_docker_net -p 7005:7005 -p 7006:7005 -p
+		7007:7005 -t springio/gs-rest-service
+	3. Check docker container -> docker container ls
+	4. Check consul agent ui --> localhost:8005 --> Check the services/instances for both the apps
+	
 	Application could be tested using the deployed Patient service which internally calls the Volunteer
 	Service App based on registered Application name rather than the relative url.
 	For eg: http://localhost:7004/volunteers/donateblood --> will invoke the "http://VolunteerApp"
