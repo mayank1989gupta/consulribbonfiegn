@@ -3,3 +3,6 @@ spring:
       consul:
          host: consul
          port: 8500
+   zipkin:
+      baseUrl: zipkin:9411/zipkin/
+      

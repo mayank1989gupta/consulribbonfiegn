@@ -48,7 +48,7 @@
 		7004:7002 -t springio/gs-rest-service
 		-> build the patient app -> gradle build docker
 		-> docker run -d --name patient --network=gradle_docker_net -p 7005:7005 -p 7006:7005 -p
-		7007:7005 -t springio/gs-rest-service
+		7007:7005 -t springio/gs-rest-service-patient
 	3. Check docker container -> docker container ls
 	4. Check consul agent ui --> localhost:8005 --> Check the services/instances for both the apps
 	

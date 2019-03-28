@@ -14,6 +14,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+import brave.sampler.Sampler;
+
 /**
  * @author MGupta
  *
@@ -39,4 +41,8 @@ public class PatientBootApplication {
 		return new RestTemplate();
 	}
 
+	@Bean
+	public Sampler defaultSampler() {
+		return Sampler.ALWAYS_SAMPLE;
+	}
 }

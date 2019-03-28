@@ -58,8 +58,12 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.boot:spring-boot-starter-logging'
-   	
+   	//consul-discovery
    	compile 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
+	//Sleuth-zipkin
+    compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
+    compile 'org.springframework.cloud:spring-cloud-starter-zipkin'
+	//cloud-commons
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-commons', version: '2.1.1.RELEASE'   	
    	   
     testCompile 'org.springframework.boot:spring-boot-starter-test'

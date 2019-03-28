@@ -5,6 +5,7 @@ package com.test.consul.ribbon.fiegn.controller;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -41,13 +42,16 @@ public class TestController {
 		return "Hello World from Patient application";
 	}
 
+	private static final Logger LOGGER = Logger.getLogger(TestController.class.getName());
+	
 	/**
-	 * Method to fetch the voluteers for the given service name.</br>
+	 * Method to fetch the volunteers for the given service name.</br>
 	 * @param aidname
 	 * @return
 	 */
 	@GetMapping(value = "/volunteers/{aidname}")
 	public List < String > listVolunteers(@PathVariable("aidname") String aidname) {
+		LOGGER.info("Patient App --> invoking the Volunteer**********");
 		System.out.println("listVolunteers using RestTemplate");
 		String[] volnames = restTemplate.getForObject(serviceurl + "/volunteers/{servicename}", String[].class, aidname);
 		List < String > volunteers = Arrays.asList(volnames);
@@ -55,7 +59,7 @@ public class TestController {
 	}
 	
 	/**
-	 * Method to fetch the voluteers for the given service name using feign client.</br>
+	 * Method to fetch the volunteers for the given service name using feign client.</br>
 	 * 
 	 * @param aidname
 	 * @return
