@@ -1,1 +1,1 @@
-Details related to Application [Setting up &, Running] can be found under the PatientApp project.
+Details related to Application &, SetUp could be found under the PatientApp project.
