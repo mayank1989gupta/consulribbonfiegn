@@ -3,6 +3,7 @@
  */
 package com.test.consul.ribbon.fiegn.pojo;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,13 +11,36 @@ import java.util.Set;
  * @author MGupta
  *
  */
-public class Volunteer {
+public class Volunteer implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String firstname;
 	private String lastname;
 	private String userid;
 	private Set <String> services = new HashSet<>();
+	
+	//Default const
+	public Volunteer( ) {}
+	
+	/**
+	 * @param id
+	 * @param firstname
+	 * @param lastname
+	 * @param userid
+	 * @param services
+	 */
+	public Volunteer(Long id, String firstname, String lastname, String userid, Set<String> services) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.userid = userid;
+		this.services = services;
+	}
 	/**
 	 * @return the id
 	 */

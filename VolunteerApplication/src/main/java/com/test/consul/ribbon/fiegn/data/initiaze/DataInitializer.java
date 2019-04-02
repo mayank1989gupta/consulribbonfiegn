@@ -40,9 +40,11 @@ public class DataInitializer {
 		vol3.setFirstname("John");
 		vol3.setLastname("Lebannon");
 		vol3.addService("donateblood");
+		//Adding the data
 		vols.add(vol1);
 		vols.add(vol2);
-		vols.add(vol3);
+		vols.add(vol3);		 
+		
 		System.out.println("Number of Volunteers:" + vols.size());
 	}
 }

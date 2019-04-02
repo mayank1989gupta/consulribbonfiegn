@@ -58,14 +58,21 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.boot:spring-boot-starter-logging'
+
    	//consul-discovery
    	compile 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
 	//Sleuth-zipkin
     compile 'org.springframework.cloud:spring-cloud-starter-sleuth'
     compile 'org.springframework.cloud:spring-cloud-starter-zipkin'
 	//cloud-commons
-	compile group: 'org.springframework.cloud', name: 'spring-cloud-commons', version: '2.1.1.RELEASE'   	
-   	   
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-commons', version: '2.1.1.RELEASE' 
+	
+	//compile 'org.kie:kie-ci:7.0.0.Final'
+	//compile 'org.drools:drools-decisiontables:7.0.0.Final'
+	//compile 'org.drools:drools-core:7.0.0.Final'
+	//compile 'org.drools:drools-compiler:7.0.0.Final'
+	//compile 'org.kie:kie-spring:7.0.0.Final'
+	 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'junit:junit'
 }
