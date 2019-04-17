@@ -1,4 +1,4 @@
-#Consul
+Consul
 	
 	Consul is a peer to peer, strongly consistent data store that uses a gossip protocol to manage
 	membership and form dynamic clusters and a raft protocol to provide consistency. It supports 
@@ -11,22 +11,22 @@
 	is easy to integrate with other Netflix products, such as Ribbon and Hysterix. Zookeeper is a
 	clustered system that is mostly geared towards big data architecture such as Hadoop and Kafka.
 	
-#Ribbon
+Ribbon
 	
 	Ribbon is a client-side load balancer which rotates requests between a list of servers based on
 	logic such as round robin or weigh based. 
 
-#Feign Client
+Feign Client
 	
 	Feign provides an abstraction over REST-based calls via annotation, by which microservices can use 
 	to communicate with each other without writing detailed REST client code.
 
-#App Detail
+App Detail
 	
 	The application is a replica sample taken from an example from DZone articles for Consul, Ribbon &,
 	Fiegn Cient.
 	
-#Set up
+Set up
 	
 	2 separate micro-services for Volunteer and, Patient
 	
@@ -35,7 +35,7 @@
 	Add the path in Path variables[The path where exe is stored locally]
 	refreshenv --> to refresh env variables
 
-#App Test
+App Test
 	
 	1. Start consul Agent: 
 	docker run -d -p 8500:8500 -p 8600:8600/udp --network=gradle_docker_net --name=consul consul:latest
